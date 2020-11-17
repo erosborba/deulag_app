@@ -6,6 +6,7 @@ import 'card_content.dart';
 class SlidingCard extends StatelessWidget {
   final String name;
   final String date;
+  final String pista;
   final String assetName;
   final double offset;
 
@@ -13,6 +14,7 @@ class SlidingCard extends StatelessWidget {
     Key key,
     @required this.name,
     @required this.date,
+    @required this.pista,
     @required this.assetName,
     @required this.offset,
   }) : super(key: key);
@@ -40,7 +42,7 @@ class SlidingCard extends StatelessWidget {
                 ),
                 child: Image.asset(
                   'assets/$assetName',
-                  height: MediaQuery.of(context).size.height * 0.3,
+                  //height: MediaQuery.of(context).size.height * 0.2,
                   alignment: Alignment(-offset.abs(), 0),
                   fit: BoxFit.none,
                 ),
@@ -49,6 +51,7 @@ class SlidingCard extends StatelessWidget {
               Expanded(
                 child: CardContent(
                   name: name,
+                  pista: pista,
                   date: date,
                   offset: gauss,
                 ),

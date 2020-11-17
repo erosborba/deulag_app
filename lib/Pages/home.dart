@@ -1,3 +1,4 @@
+import 'package:deulag_app/Models/card_style.dart';
 import 'package:flutter/material.dart';
 import '../Models/sliding_cards_view.dart';
 import '../constants.dart';
@@ -18,6 +19,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 18),
                 ),
                 SlidingCardsView(),
+                CardStyle(assetName: 'brasil.jpg')
               ],
             ),
           ),

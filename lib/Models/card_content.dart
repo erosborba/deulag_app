@@ -4,10 +4,11 @@ import '../constants.dart';
 
 class CardContent extends StatelessWidget {
   final String name;
+  final String pista;
   final String date;
   final double offset;
 
-  const CardContent({Key key, this.name, this.date, this.offset})
+  const CardContent({Key key, this.name, this.pista, this.date, this.offset})
       : super(key: key);
 
   @override
@@ -17,7 +18,7 @@ class CardContent extends StatelessWidget {
       child: Transform.translate(
         offset: Offset(8 * offset, 0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               name,
@@ -25,16 +26,18 @@ class CardContent extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              date,
+              pista,
+              textAlign: TextAlign.center,
               style: TextStyle(
-                  //color: Colors.grey,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18),
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
             ),
             Spacer(),
             Row(children: [
               Spacer(),
               Container(
+                width: 100,
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 decoration: BoxDecoration(
                   color: kPrimaryColor,
@@ -44,7 +47,7 @@ class CardContent extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  'Domingo',
+                  date,
                   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
                 ),
               )
