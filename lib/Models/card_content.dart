@@ -22,33 +22,47 @@ class CardContent extends StatelessWidget {
           children: [
             Text(
               name,
-              style: kTextTitle,
+              style: kTabelaNome,
             ),
-            SizedBox(height: 8),
-            Text(
-              pista,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              ),
-            ),
+            SizedBox(height: 1),
+            Text(pista, textAlign: TextAlign.center, style: kTabelaTilePts),
             Spacer(),
             Row(children: [
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                child: Text('Domingo'),
+              ),
               Spacer(),
               Container(
                 width: 100,
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 decoration: BoxDecoration(
-                  color: kPrimaryColor,
+                  color: Color(0XFFEFF3F6),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Color.fromRGBO(0, 0, 0, 0.1),
+                        offset: Offset(6, 2),
+                        blurRadius: 6.0,
+                        spreadRadius: 3.0),
+                    BoxShadow(
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
+                        offset: Offset(-6, -2),
+                        blurRadius: 6.0,
+                        spreadRadius: 3.0)
+                  ],
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(25),
                     bottomRight: Radius.circular(25),
                   ),
                 ),
-                child: Text(
-                  date,
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+                child: Center(
+                  child: Text(
+                    date,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 18,
+                        color: kTextColorDark),
+                  ),
                 ),
               )
             ]),

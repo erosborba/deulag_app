@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'sliding_card.dart';
 
 class SlidingCardsView extends StatefulWidget {
@@ -13,7 +14,7 @@ class _SlidingCardsViewState extends State<SlidingCardsView> {
   @override
   void initState() {
     super.initState();
-    pageController = PageController(viewportFraction: 0.8);
+    pageController = PageController(viewportFraction: 0.7);
     pageController.addListener(
       () {
         setState(

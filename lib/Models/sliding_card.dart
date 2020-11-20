@@ -28,36 +28,58 @@ class SlidingCard extends StatelessWidget {
       offset: Offset(-32 * gauss * offset.sign, 0), // to make space between
 
       child: Card(
-          color: kSurfaceColor,
-          margin: EdgeInsets.only(left: 8, right: 8, bottom: 24),
-          elevation: 8,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(32),
-          ),
-          child: Column(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(32),
-                ),
-                child: Image.asset(
-                  'assets/$assetName',
-                  //height: MediaQuery.of(context).size.height * 0.2,
+        color: kSurfaceColor,
+        margin: EdgeInsets.only(left: 8, right: 8, bottom: 24),
+        elevation: 8,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(32),
+        ),
+        child: Column(
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height * 0.22,
+              width: MediaQuery.of(context).size.height * 0.40,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/$assetName',
+                    //
+                  ),
+                  scale: 1.950,
                   alignment: Alignment(-offset.abs(), 0),
                   fit: BoxFit.none,
                 ),
-              ),
-              SizedBox(height: 8),
-              Expanded(
-                child: CardContent(
-                  name: name,
-                  pista: pista,
-                  date: date,
-                  offset: gauss,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(
+                    30,
+                  ),
                 ),
               ),
-            ],
-          )),
+            ),
+
+            // ClipRRect(
+            //   borderRadius: BorderRadius.vertical(
+            //     top: Radius.circular(32),
+            //   ),
+            //   child: Image.asset(
+            //     'assets/$assetName',
+            //     //height: MediaQuery.of(context).size.height * 0.2,
+            //     alignment: Alignment(-offset.abs(), 0),
+            //     fit: BoxFit.none,
+            //   ),
+            // ),
+            SizedBox(height: 1),
+            Expanded(
+              child: CardContent(
+                name: name,
+                pista: pista,
+                date: date,
+                offset: gauss,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

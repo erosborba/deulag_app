@@ -9,3 +9,12 @@ const kTextColorDark = Color(0xFF121212);
 
 const kTextTitle =
     TextStyle(fontSize: 20, color: kTextColorDark, fontWeight: FontWeight.w600);
+
+const kTabelaNome = TextStyle(fontSize: 18, fontWeight: FontWeight.w400);
+const kTabelaEquipe = TextStyle(fontSize: 10, fontWeight: FontWeight.w300);
+const kTabelaPontos = TextStyle(fontSize: 18, fontWeight: FontWeight.w500);
+const kTabelaposicao = TextStyle(fontSize: 18, fontWeight: FontWeight.w900);
+const kTabelaTileNome = TextStyle(fontSize: 18, fontWeight: FontWeight.w400);
+const kTabelaTilePts =
+    TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.black54);
+const kBotaoRedondo = Color(0xFF393939);
