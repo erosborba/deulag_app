@@ -56,106 +56,107 @@ class _FloatNavigationBarState extends State<FloatNavigationBar>
       child: Stack(
         children: <Widget>[
           Positioned(
-              right: 30,
-              bottom: 30,
-              child: Stack(
-                alignment: Alignment.bottomRight,
-                children: <Widget>[
-                  IgnorePointer(
-                    child: Container(
-                      height: 150.0,
-                      width: 150.0,
-                    ),
+            bottom: 10,
+            right: 10,
+            child: Stack(
+              alignment: Alignment.bottomRight,
+              children: <Widget>[
+                IgnorePointer(
+                  child: Container(
+                    height: 150.0,
+                    width: 150.0,
                   ),
-                  Transform.translate(
-                    offset: Offset.fromDirection(getRadiansFromDegree(270),
-                        degOneTranslationAnimation.value * 100),
-                    child: Transform(
-                      transform: Matrix4.rotationZ(
-                          getRadiansFromDegree(rotationAnimation.value))
-                        ..scale(degOneTranslationAnimation.value),
-                      alignment: Alignment.center,
-                      child: CircularButton(
-                        color: Colors.blue,
-                        width: 50,
-                        height: 50,
-                        icon: Icon(
-                          Icons.add,
-                          color: Colors.white,
-                        ),
-                        onClick: () {
-                          print('First Button');
-                        },
-                      ),
-                    ),
-                  ),
-                  Transform.translate(
-                    offset: Offset.fromDirection(getRadiansFromDegree(225),
-                        degTwoTranslationAnimation.value * 100),
-                    child: Transform(
-                      transform: Matrix4.rotationZ(
-                          getRadiansFromDegree(rotationAnimation.value))
-                        ..scale(degTwoTranslationAnimation.value),
-                      alignment: Alignment.center,
-                      child: CircularButton(
-                        color: Colors.black,
-                        width: 50,
-                        height: 50,
-                        icon: Icon(
-                          Icons.camera_alt,
-                          color: Colors.white,
-                        ),
-                        onClick: () {
-                          print('Second button');
-                        },
-                      ),
-                    ),
-                  ),
-                  Transform.translate(
-                    offset: Offset.fromDirection(getRadiansFromDegree(180),
-                        degThreeTranslationAnimation.value * 100),
-                    child: Transform(
-                      transform: Matrix4.rotationZ(
-                          getRadiansFromDegree(rotationAnimation.value))
-                        ..scale(degThreeTranslationAnimation.value),
-                      alignment: Alignment.center,
-                      child: CircularButton(
-                        color: Colors.orangeAccent,
-                        width: 50,
-                        height: 50,
-                        icon: Icon(
-                          Icons.person,
-                          color: Colors.white,
-                        ),
-                        onClick: () {
-                          print('Third Button');
-                        },
-                      ),
-                    ),
-                  ),
-                  Transform(
+                ),
+                Transform.translate(
+                  offset: Offset.fromDirection(getRadiansFromDegree(270),
+                      degOneTranslationAnimation.value * 100),
+                  child: Transform(
                     transform: Matrix4.rotationZ(
-                        getRadiansFromDegree(rotationAnimation.value)),
+                        getRadiansFromDegree(rotationAnimation.value))
+                      ..scale(degOneTranslationAnimation.value),
                     alignment: Alignment.center,
                     child: CircularButton(
-                      color: Colors.red,
-                      width: 60,
-                      height: 60,
+                      color: Colors.blue,
+                      width: 50,
+                      height: 50,
                       icon: Icon(
-                        Icons.menu,
+                        Icons.add,
                         color: Colors.white,
                       ),
                       onClick: () {
-                        if (animationController.isCompleted) {
-                          animationController.reverse();
-                        } else {
-                          animationController.forward();
-                        }
+                        print('First Button');
                       },
                     ),
-                  )
-                ],
-              ))
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset.fromDirection(getRadiansFromDegree(225),
+                      degTwoTranslationAnimation.value * 100),
+                  child: Transform(
+                    transform: Matrix4.rotationZ(
+                        getRadiansFromDegree(rotationAnimation.value))
+                      ..scale(degTwoTranslationAnimation.value),
+                    alignment: Alignment.center,
+                    child: CircularButton(
+                      color: Colors.black,
+                      width: 50,
+                      height: 50,
+                      icon: Icon(
+                        Icons.camera_alt,
+                        color: Colors.white,
+                      ),
+                      onClick: () {
+                        print('Second button');
+                      },
+                    ),
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset.fromDirection(getRadiansFromDegree(180),
+                      degThreeTranslationAnimation.value * 100),
+                  child: Transform(
+                    transform: Matrix4.rotationZ(
+                        getRadiansFromDegree(rotationAnimation.value))
+                      ..scale(degThreeTranslationAnimation.value),
+                    alignment: Alignment.center,
+                    child: CircularButton(
+                      color: Colors.orangeAccent,
+                      width: 50,
+                      height: 50,
+                      icon: Icon(
+                        Icons.person,
+                        color: Colors.white,
+                      ),
+                      onClick: () {
+                        print('Third Button');
+                      },
+                    ),
+                  ),
+                ),
+                Transform(
+                  transform: Matrix4.rotationZ(
+                      getRadiansFromDegree(rotationAnimation.value)),
+                  alignment: Alignment.center,
+                  child: CircularButton(
+                    color: Colors.red,
+                    width: 60,
+                    height: 60,
+                    icon: Icon(
+                      Icons.menu,
+                      color: Colors.white,
+                    ),
+                    onClick: () {
+                      if (animationController.isCompleted) {
+                        animationController.reverse();
+                      } else {
+                        animationController.forward();
+                      }
+                    },
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

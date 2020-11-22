@@ -29,7 +29,7 @@ class SlidingCard extends StatelessWidget {
 
       child: Card(
         color: kSurfaceColor,
-        margin: EdgeInsets.only(left: 8, right: 8, bottom: 24),
+        margin: EdgeInsets.only(left: 8, right: 8, bottom: 20, top: 20),
         elevation: 8,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(32),

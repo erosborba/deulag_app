@@ -1,3 +1,6 @@
+import 'package:deulag_app/Models/classification.dart';
+import 'package:deulag_app/Models/leaderboard.dart';
+
 import '../Models/float_navigation_bar.dart';
 import '../Models/widget_menu.dart';
 
@@ -11,19 +14,18 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatNavigationBar(),
       backgroundColor: kBackgroundColor,
-      body: Stack(
-        children: <Widget>[
-          SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                MenuHome(title: "Proximas Etapas"),
-                SlidingCardsView(),
-                MenuHome(title: "Tabela de Pilotos"),
-              ],
-            ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              MenuHome(line1: "Proximas ", line2: "Etapas"),
+              SlidingCardsView(),
+              MenuHome(line1: "Classificação ", line2: "Pilotos"),
+              LeaderBoard(),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
