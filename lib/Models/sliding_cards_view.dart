@@ -14,7 +14,7 @@ class _SlidingCardsViewState extends State<SlidingCardsView> {
   @override
   void initState() {
     super.initState();
-    pageController = PageController(viewportFraction: 0.7);
+    pageController = PageController(viewportFraction: 0.6);
     pageController.addListener(
       () {
         setState(
