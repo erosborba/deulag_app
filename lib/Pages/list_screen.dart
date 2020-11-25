@@ -1,3 +1,5 @@
+import 'package:deulag_app/Models/learderboard_list.dart';
+
 import '../Models/usuarios.dart';
 import '../services/usuario_services.dart';
 import 'package:flutter/material.dart';
@@ -52,21 +54,29 @@ class ListScreen extends StatelessWidget {
                 return ListView.builder(
                   itemCount: usuarios.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      leading: CircleAvatar(
-                        radius: 25,
-                        backgroundImage: AssetImage(usuarios[index].image ??
-                            'assets/images/pilotos/stig.jpg'),
-                      ),
-                      title: Text((index + 1).toString()),
-                      subtitle: Text(usuarios[index].pontos.toString()),
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => ViewUsuarioScreen(
-                                  usuario: usuarios[index],
-                                )));
-                      },
+                    var driver = usuarios[index];
+                    return LeaderBoardList(
+                      nome: driver.nome,
+                      equipe: driver.equipe,
+                      imagem: driver.image,
+                      pontos: driver.pontos,
+                      position: (index + 1),
                     );
+                    // ListTile(
+                    //   leading: CircleAvatar(
+                    //     radius: 25,
+                    //     backgroundImage: AssetImage(usuarios[index].image ??
+                    //         'assets/images/pilotos/stig.jpg'),
+                    //   ),
+                    //   title: Text((index + 1).toString()),
+                    //   subtitle: Text(usuarios[index].pontos.toString()),
+                    //   onTap: () {
+                    //     Navigator.of(context).push(MaterialPageRoute(
+                    //         builder: (context) => ViewUsuarioScreen(
+                    //               usuario: usuarios[index],
+                    //             )));
+                    //   },
+                    // );
                   },
                 );
             }

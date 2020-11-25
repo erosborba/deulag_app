@@ -1,3 +1,5 @@
+import 'package:deulag_app/Pages/list_screen.dart';
+import 'package:deulag_app/widgets/bouncy_page_route.dart';
 import 'package:flutter/material.dart';
 
 class FloatNavigationBar extends StatefulWidget {
@@ -80,7 +82,7 @@ class _FloatNavigationBarState extends State<FloatNavigationBar>
                       width: 50,
                       height: 50,
                       icon: Icon(
-                        Icons.add,
+                        Icons.insert_invitation,
                         color: Colors.white,
                       ),
                       onClick: () {
@@ -98,14 +100,16 @@ class _FloatNavigationBarState extends State<FloatNavigationBar>
                       ..scale(degTwoTranslationAnimation.value),
                     alignment: Alignment.center,
                     child: CircularButton(
-                      color: Colors.black,
+                      color: Colors.pink[300],
                       width: 50,
                       height: 50,
                       icon: Icon(
-                        Icons.camera_alt,
+                        Icons.grade,
                         color: Colors.white,
                       ),
                       onClick: () {
+                        Navigator.push(
+                            context, BouncyPageRoute(widget: ListScreen()));
                         print('Second button');
                       },
                     ),
