@@ -32,7 +32,7 @@ class _SlidingCardsViewState extends State<SlidingCardsView> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250,
+      height: 260,
       child: PageView(
         controller: pageController,
         children: [

@@ -38,15 +38,15 @@ class SlidingCard extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * 0.22,
-                width: MediaQuery.of(context).size.height * 0.40,
+                height: 160,
+                width: 240,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
                       'assets/$assetName',
                       //
                     ),
-                    scale: 1.950,
+                    scale: 2,
                     alignment: Alignment(-offset.abs(), 0),
                     fit: BoxFit.none,
                   ),

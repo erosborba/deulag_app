@@ -16,7 +16,7 @@ class MenuHome extends StatelessWidget {
           height: 50,
           margin: EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: Color(0XFFEFF3F6),
+            color: Color.fromRGBO(238, 238, 238, 1),
             borderRadius: BorderRadius.all(Radius.circular(16)),
             boxShadow: kBoxShadow,
           ),
@@ -26,7 +26,7 @@ class MenuHome extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
-              color: Colors.white12,
+              color: Color.fromRGBO(238, 238, 238, 1),
               borderRadius: BorderRadius.all(Radius.circular(16)),
             ),
             child: Center(
