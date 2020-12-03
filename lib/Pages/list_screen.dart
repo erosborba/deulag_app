@@ -4,8 +4,6 @@ import '../Models/usuarios.dart';
 import '../services/usuario_services.dart';
 import 'package:flutter/material.dart';
 
-import 'view_usuario_screen.dart';
-
 class ListScreen extends StatelessWidget {
   final UsuarioService usuarioService = UsuarioService();
   @override
