@@ -10,7 +10,8 @@ class ListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Usuarios'),
+        elevation: 2,
+        title: Text('Classificação Pilotos'),
       ),
       body: Center(
         child: FutureBuilder<List<Usuario>>(
@@ -27,7 +28,7 @@ class ListScreen extends StatelessWidget {
                       size: 60,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 16),
+                      padding: const EdgeInsets.only(top: 10),
                       child: Text('Error: ${snapshot.error}'),
                     )
                   ]);
@@ -56,6 +57,7 @@ class ListScreen extends StatelessWidget {
                     return LeaderBoardList(
                       nome: driver.nome,
                       equipe: driver.equipe,
+                      cor: driver.cor,
                       imagem: driver.image,
                       pontos: driver.pontos,
                       position: (index + 1),

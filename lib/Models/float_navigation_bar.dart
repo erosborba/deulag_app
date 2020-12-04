@@ -111,6 +111,7 @@ class _FloatNavigationBarState extends State<FloatNavigationBar>
                         Navigator.push(
                             context, BouncyPageRoute(widget: ListScreen()));
                         print('Second button');
+                        animationController.reverse();
                       },
                     ),
                   ),
@@ -132,6 +133,7 @@ class _FloatNavigationBarState extends State<FloatNavigationBar>
                         color: Colors.white,
                       ),
                       onClick: () {
+                        animationController.reverse();
                         print('Third Button');
                       },
                     ),
