@@ -19,68 +19,64 @@ class LeaderBoardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(8),
-      margin: EdgeInsets.all(3),
+      margin: EdgeInsets.all(5),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: kBoxShadow,
         borderRadius: kBoxRadius16,
       ),
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                height: 50,
-                width: 10,
-                decoration: BoxDecoration(
-                  color: HexColor(cor ?? "#121212"),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(16),
-                    bottomLeft: Radius.circular(16),
-                  ),
-                ),
-              ),
-              Text(
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Container(
+              width: 16,
+              child: Text(
                 position.toString(),
+                style: kTabelaPontos,
               ),
-              CircleAvatar(
-                radius: 25,
-                backgroundImage:
-                    AssetImage(imagem ?? 'assets/images/pilotos/stig.jpg'),
-              ),
-              SizedBox(
-                width: 200,
-                child: RichText(
-                  textAlign: TextAlign.start,
-                  text: TextSpan(
-                    style: DefaultTextStyle.of(context).style,
-                    children: [
-                      TextSpan(text: nome + "\n"),
-                      TextSpan(text: equipe)
-                    ],
-                  ),
-                ),
-              ),
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  style: DefaultTextStyle.of(context).style,
-                  children: [
-                    TextSpan(text: pontos.toString() + "\n"),
-                    TextSpan(text: 'PTS')
-                  ],
-                ),
-              ),
-            ],
+            ),
           ),
           Container(
-            height: 6,
-            width: 65,
+            height: 50,
+            width: 10,
             decoration: BoxDecoration(
-              color: HexColor(cor),
-              borderRadius: BorderRadius.circular(5),
+              color: HexColor(cor ?? "#121212"),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(0),
+                bottomLeft: Radius.circular(0),
+              ),
+            ),
+          ),
+          CircleAvatar(
+            radius: 25,
+            backgroundImage:
+                AssetImage(imagem ?? 'assets/images/pilotos/stig.jpg'),
+          ),
+          SizedBox(
+            width: 200,
+            child: RichText(
+              textAlign: TextAlign.start,
+              text: TextSpan(
+                style: DefaultTextStyle.of(context).style,
+                children: [
+                  TextSpan(text: nome + "\n", style: kTabelaNome),
+                  TextSpan(text: equipe, style: kTabelaEquipe)
+                ],
+              ),
+            ),
+          ),
+          RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              style: DefaultTextStyle.of(context).style,
+              children: [
+                TextSpan(
+                  text: pontos.toString() + "\n",
+                ),
+                TextSpan(text: 'PTS')
+              ],
             ),
           ),
         ],

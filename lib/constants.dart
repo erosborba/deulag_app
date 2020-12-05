@@ -17,7 +17,7 @@ const kTextTitle =
 
 const kTabelaNome = TextStyle(fontSize: 16, fontWeight: FontWeight.w400);
 const kTabelaEquipe = TextStyle(fontSize: 10, fontWeight: FontWeight.w300);
-const kTabelaPontos = TextStyle(fontSize: 18, fontWeight: FontWeight.w500);
+const kTabelaPontos = TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
 const kTabelaposicao = TextStyle(fontSize: 18, fontWeight: FontWeight.w900);
 const kTabelaTileNome = TextStyle(fontSize: 18, fontWeight: FontWeight.w400);
 const kTabelaTilePts =
